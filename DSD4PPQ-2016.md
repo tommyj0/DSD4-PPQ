@@ -56,7 +56,7 @@ Harvard architectures solve this by splitting the data and instruction **buses**
 
 ### d)
 
-> blt is not a psuedoinstruction in RV, but ble is. Answer the Q replacing "blt" with "ble" 
+> blt is not a psuedo-instruction in RV, but ble is. Answer the Q replacing "blt" with "ble" 
 
 "ble" would be implemented by swapping the source registers of the "bge" core instruction:
 
@@ -227,7 +227,7 @@ no chance I'm doing the array
 
 ii.
 
-''
+ditto
 
 
 

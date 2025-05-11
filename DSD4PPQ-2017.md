@@ -137,4 +137,80 @@ This use-case is an example of high spatial locality. The Block size is responsi
 
 ## B2
 
+### a)
+
+i.
+
+Amdahl's Law explains potential speedup considering the improvable portion of the workload. In other words, you can only parallelise the parallelisable part.
+
+This equation represents the parallelisable part as the execution time affected by improvement, the amount of improvement as the level of parallelism and the unaffected execution time as the sequential portion of the workload.
+
+Weak scaling maintains constant execution time, by scaling the parallelsism to the size of the problem. Strong scaling required fixed problem-size, and execution time can be improved by scaling the parallelism.
+
+ii.
+
+$$
+T_{mul} + T_{sum}/10 \rightarrow T_{mul} + T_{sum}/100
+$$
+
+Sequential FP multiplication cannot be sped up, but the 100 element array addition can be parallelised up to 100 cores.
+
+iii.
+
+Utilisation would be higher for the lower processor count. 1 core would have 100% utilisation, which decreases as other cores idle while one core completes the sequential part of the workload.
+
+### b)
+
+> Diagrams are in the slides
+
+i.
+
+Single core embedded processor reading from a sensor.
+
+ii.
+
+GPU processors apply instructions to arrays of data, similar to the RV vector extension
+
+iii.
+
+A fault tolerant computer, introducing code redundancies in order to improve security
+
+iv.
+
+Modern multiple-issue multi-threaded processor (such as an Intel i7) which can read many instructions in one cycle and execute those operations on arrays of data using vectors
+
+### c)
+
+i.
+
+Mem BW, FP performance
+
+ii.
+
+same graph but shifted to the left
+
+## B3
+
+### a)
+
+i.
+
+> Fairly obvious translation to RV
+
+ALU needs to perform signed addition for Load store operations. Both instruction formats include immediates which are decoded as 2s complement offsets to rs1.
+
+ALU does not perform the addition required for branch and jump commands, a separate addition block with PC is included in the execution stage.
+
+ii.
+
+|Operation|opcode|
+|---|---|
+|R-format|0110011|
+|lw|0000011|
+|sw|0100011|
+|branch|1100011|
+
+iii.
+
+cba
 
