@@ -135,7 +135,7 @@ iii.
 
 Current block size is already large at 128B, increasing it further would result in a higher miss rate, due to increase pollution (recently loaded blocks overwriting useful data)
 
-Hit time would decrease as there would be fewer blocks to search through
+Hit time would increase as there would be fewer blocks to search through
 
 iv.
 
