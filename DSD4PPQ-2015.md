@@ -205,41 +205,25 @@ $$
 
 > Use x1,x2,x3 instead of $s0,$s1,$s2 because x0 is hardwired to 0
 
-// x1 = x
+    // x1 = x
+    // x2 = y
+    // x3 = result
 
-// x2 = y
-
-// x3 = result
-
-mul x4,x1,x1 // x4 = x^2
-
-mul x3,x4,x1 // x3 = x^3
-
-addi x5,x0,6 // x5 = 6
-
-mul x4,x4,x5 // x4 = 6x^2
-
-mul x4,x4,x2 // x4 = 6x^2y
-
-add x3,x3,x4 // x3 = x^3 + 6x^2y
-
-mul x4,x2,x2 // x4 = y^2
-
-mul x4,x4,x2 // x4 = xy^2
-
-addi x5,x0,12 // x5 = 12
-
-mul x4,x4,x5 // x4 = 12xy^2
-
-add x3,x3,x4 // x3 = x^3 + 6x^2y + 12xy^2
-
-mul x4,x2,x2 // x4 = y^2
-
-mul x4,x4,x2 // x4 = y^3
-
-slli x4,x4,3 // x4 = 8*y^3
-
-add x3,x3,x4 // x3 = x^3 + 6x^2y + 12xy^2 + 8y^3
+    mul x4,x1,x1 // x4 = x^2
+    mul x3,x4,x1 // x3 = x^3
+    addi x5,x0,6 // x5 = 6
+    mul x4,x4,x5 // x4 = 6x^2
+    mul x4,x4,x2 // x4 = 6x^2y
+    add x3,x3,x4 // x3 = x^3 + 6x^2y
+    mul x4,x2,x2 // x4 = y^2
+    mul x4,x4,x2 // x4 = xy^2
+    addi x5,x0,12 // x5 = 12
+    mul x4,x4,x5 // x4 = 12xy^2
+    add x3,x3,x4 // x3 = x^3 + 6x^2y + 12xy^2
+    mul x4,x2,x2 // x4 = y^2
+    mul x4,x4,x2 // x4 = y^3
+    slli x4,x4,3 // x4 = 8*y^3
+    add x3,x3,x4 // x3 = x^3 + 6x^2y + 12xy^2 + 8y^3
 
 ## B3
 
