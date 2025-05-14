@@ -127,4 +127,8 @@ Conflict misses are decreased
 
 i.
 
-Arithmetic intensity is the number of Floating Point operations, 
+Arithmetic intensity is the number of Floating Point operations per the number of bytes that need to be stored/loaded. The graph represents the two bottlenecks of a multiprocessor system, either the memory bandwidth maintaining a constant ratio between FLOPs completed and FLOPs loaded creating the sloped region, or the floating point capabilities of the processor, the flat region.
+
+ii.
+
+no
