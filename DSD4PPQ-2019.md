@@ -211,7 +211,7 @@ Tag =17b, Index = 9b, BO = 6b
 
 i.
 
-Hit time increases, miss rate decreases, miss penalty increases
+Hit time decreases, miss rate increases, miss penalty decreases
 
 ii.
 
